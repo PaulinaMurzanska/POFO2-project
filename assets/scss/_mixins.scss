@@ -1,0 +1,24 @@
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-font-size, $max-font-size) {
+    $u1: unit(320px);
+    $u2: unit(1170px);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+        & {
+            font-size: $min-font-size;
+
+            @media screen and (min-width: 320px) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - 320px) / #{strip-unit(1170px - 320px)}));
+            }
+
+            @media screen and (min-width: 1170px) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}

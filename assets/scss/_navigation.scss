@@ -1,0 +1,180 @@
+body {
+    position: relative;
+
+    .nav-bar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+
+        .menu {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            display: none;
+
+            .menu-left {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                background-image: url("../img/menu-background-1.png");
+                background-position: center;
+                background-size: cover;
+
+                .footer {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    position: absolute;
+                    bottom: 10px;
+                    color: #757575;
+                    font-size: 12px;
+                    font-family: $mainFontFamilyRoboto;
+
+                    i {
+                        margin-right: 5px;
+                    }
+
+                    p {
+                        a {
+                            color: #757575;
+
+                            &:hover {
+                                color: #ff214f;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .menu-right {
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $mainTextcolor;
+                position: relative;
+
+                .main-menu {
+                    @include fluid-type(22px, 48px);
+                    width: 100%;
+                    display: block;
+
+
+
+
+                    li {
+                        width: 70%;
+                        line-height: 1.5;
+                        margin: 0 auto;
+                        display: block;
+
+                        &:hover {
+
+
+                            .submenu {
+                                display: block;
+
+
+                            }
+
+                            span {
+                                color: #ff214f;
+                            }
+                        }
+
+                        a {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: #000000;
+                            font-weight: 600;
+
+                            i {
+                                font-size: 12px;
+                            }
+                        }
+
+                        .submenu {
+                            font-size: 12px;
+                            width: 100%;
+                            display: none;
+
+                            a {
+                                li {
+
+                                    margin: 0;
+                                    font-size: 14px;
+                                    font-family: $headerFontFamilyMontserrat;
+                                    color: #757575;
+                                    border-bottom: 1px solid #e3e3e3;
+                                    width: 70%;
+                                    line-height: 18px;
+                                    font-weight: 400;
+                                    padding: 5px 0;
+
+
+                                }
+
+                            }
+
+
+
+                        }
+
+                    }
+
+                    .socials {
+                        width: 70%;
+                        line-height: 1.5;
+                        margin: 15% auto 0;
+                        display: block;
+                        font-size: 16px;
+
+                        a {
+                            margin-right: 2%;
+                            margin-left: 2%;
+                            color: #000000;
+
+                            &:hover {
+                                color: #ff214f;
+                                transition: .3s;
+                            }
+                        }
+
+
+                    }
+
+
+                }
+
+            }
+
+
+        }
+
+
+
+
+
+    }
+
+}
+
+.menu-open {
+    .nav-bar {
+        .menu {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+
+        }
+
+    }
+}
