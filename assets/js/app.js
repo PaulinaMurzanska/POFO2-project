@@ -48,3 +48,32 @@ $('.hamburger').on('click', (event) => {
     $('body').toggleClass('menu-open');
 
 })
+
+$('.main-menu .fas.one').on('click', (event) => {
+    $('.submenu.one').toggleClass('open');
+
+
+})
+
+$('.main-menu .fas.two').on('click', (event) => {
+    $('.submenu.two').toggleClass('open');
+
+
+})
+$('.main-menu .fas.three').on('click', (event) => {
+    $('.submenu.three').toggleClass('open');
+
+})
+$('.main-menu .fas.four').on('click', (event) => {
+    $('.submenu.four').toggleClass('open');
+
+})
+$('.main-menu .fas.five').on('click', (event) => {
+    $('.submenu.five').toggleClass('open');
+
+})
+$('.main-menu .fas.six').on('click', (event) => {
+    $('.submenu.six').toggleClass('open');
+
+})
+

@@ -84,14 +84,6 @@ body {
                         display: block;
 
                         &:hover {
-
-
-                            .submenu {
-                                display: block;
-
-
-                            }
-
                             span {
                                 color: #ff214f;
                             }
@@ -106,6 +98,7 @@ body {
 
                             i {
                                 font-size: 12px;
+
                             }
                         }
 
@@ -127,10 +120,27 @@ body {
                                     font-weight: 400;
                                     padding: 5px 0;
 
+                                    &:hover {
+                                        color: #ff214f;
+                                        transition: .3s;
+                                        font-weight: 700;
+                                    }
+
+
+
 
                                 }
 
+
+
                             }
+
+                            &.open {
+                                display: block;
+
+                            }
+
+
 
 
 
@@ -158,6 +168,8 @@ body {
 
 
                     }
+
+
 
 
                 }

@@ -1039,10 +1039,6 @@ body .nav-bar .menu .menu-right .main-menu li {
   display: block;
 }
 
-body .nav-bar .menu .menu-right .main-menu li:hover .submenu {
-  display: block;
-}
-
 body .nav-bar .menu .menu-right .main-menu li:hover span {
   color: #ff214f;
 }
@@ -1081,6 +1077,17 @@ body .nav-bar .menu .menu-right .main-menu li .submenu a li {
   line-height: 18px;
   font-weight: 400;
   padding: 5px 0;
+}
+
+body .nav-bar .menu .menu-right .main-menu li .submenu a li:hover {
+  color: #ff214f;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-weight: 700;
+}
+
+body .nav-bar .menu .menu-right .main-menu li .submenu.open {
+  display: block;
 }
 
 body .nav-bar .menu .menu-right .main-menu .socials {
